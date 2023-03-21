@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Notes</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>My Notes</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Add a Note</h2>
+        <form>
+          <label for="note-title">Title:</label>
+          <input type="text" id="note-title" name="note-title">
+          <label for="note-body">Note:</label>
+          <textarea id="note-body" name="note-body"></textarea>
+          <button type="submit">Add Note</button>
+        </form>
+      </section>
+      <section>
+        <h2>Recent Notes</h2>
+        <ul id="note-list">
+          <li>
+            <h3>Note Title</h3>
+            <p>Note content goes here.</p>
+            <p>Shared by <em>username</em> on <time datetime="2023-03-21T14:30:00Z">March 21, 2023 at 2:30pm UTC</time></p>
+          </li>
+          <!-- Additional notes would be added here dynamically with JavaScript -->
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>Created by Me, 2023</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
