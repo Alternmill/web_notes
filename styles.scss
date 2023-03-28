@@ -1,0 +1,293 @@
+/* Main styles.scss file */
+
+// Variables
+$primary-color: #000000;
+$secondary-color: #ffffff;
+$middle-color: #888888;
+$border-color: #f5f5f5;
+$font-color: #ececec;
+$background-color: #e2e2e2;
+
+// Basic styles
+body {
+	width: 100%;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+
+main {
+	padding: 1em;
+	padding-bottom: 50px;
+
+	@media (min-width: 768px) {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+}
+
+.but {
+	display: block;
+	padding: 10px;
+	border: 1px solid $border-color;
+	border-radius: 5px;
+	background-color: $primary-color;
+	text-decoration: none;
+	color: $secondary-color;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: inline-block;
+
+	&:hover {
+		background-color: $background-color;
+		color: $primary-color;
+	}
+}
+
+header {
+	background-color: $primary-color;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: auto;
+
+	.logo {
+		img {
+			height: 100px;
+			object-fit: contain;
+		}
+	}
+}
+
+nav {
+	ul {
+		display: flex;
+		list-style: none;
+		margin-right: 20px;
+
+		li {
+			margin-left: 20px;
+		}
+	}
+}
+
+.footer-div {
+	background-color: $primary-color;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	// Footer content
+	p {
+		margin: 20px;
+		color: $secondary-color;
+		display: inline;
+	}
+
+	ul {
+		display: flex;
+		list-style: none;
+		margin-right: 20px;
+
+		li {
+			margin-left: 20px;
+		}
+	}
+}
+
+.container {
+	margin: 0 auto;
+	margin-right: 0 auto;
+	display: flex;
+	max-width: 100%;
+	flex-direction: row;
+	padding: 50px;
+	justify-content: space-between;
+}
+
+button {
+	background-color: $primary-color;
+	border: none;
+	color: #fff;
+	padding: 0.5em 1em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1em;
+	margin-top: 0.5em;
+	cursor: pointer;
+}
+
+// Form styles
+label {
+	display: block;
+	margin-top: 1em;
+}
+
+input[type="text"],
+textarea {
+	border: 1px solid $border-color;
+	padding: 0.5em;
+	width: 100%;
+	margin-top: 0.5em;
+}
+
+button[type="submit"] {
+	margin-top: 1em;
+}
+
+// Define mixins
+@mixin center-container {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+// Define styles
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f5f5f5;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+label {
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+input[type="text"],
+textarea {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0069d9;
+}
+
+
+.note-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 20px;
+	flex: 1;
+    margin-right: 50px;
+	height: fit-content;
+}
+
+
+.note {
+	background-color: #f7f7f7;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: 20px;
+	height: fit-content;
+	.note-title {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+
+	.note-text {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+
+	.note-tags {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 10px;
+
+		li {
+			display: inline-block;
+			background-color: #eee;
+			border-radius: 5px;
+			padding: 5px 10px;
+			margin-right: 10px;
+			font-size: 14px;
+			color: #555;
+		}
+	}
+
+	.note-last-updated {
+		font-size: 14px;
+		color: #888;
+	}
+}
+
+
+.container-log {
+	@include center-container;
+	padding: 50px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		label {
+			font-size: 1.2em;
+			margin-top: 1em;
+		}
+
+		input[type="text"],
+		input[type="password"],
+		input[type="email"] {
+			border: none;
+			border-bottom: 2px solid #ddd;
+			padding: 0.5em;
+			font-size: 1.2em;
+			margin-top: 0.5em;
+			width: 100%;
+			transition: border-color 0.2s ease-in-out;
+
+			&:focus {
+				outline: none;
+				border-bottom-color: $primary-color;
+			}
+		}
+
+	}
+
+	h1 {
+		margin-top: 0;
+	}
+	a {
+		
+		font-size: 1em;
+	}
+}
+
+.textarea-addnote{
+	min-width: none;
+	max-width: 300px;
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding: 1em;
+	}
+}

@@ -7,34 +7,75 @@
   </head>
   <body>
     <header>
-      <h1>My Notes</h1>
+      <div class="logo">
+        <img src="./img/logo.png" alt="MindShare">
+      </div>
+      <nav>
+        <ul>
+          <li><a class="but" href="login.html">Log In</a></li>
+          <li><a class="but" href="signup.html">Sign Up</a></li>
+        </ul>
+      </nav>
     </header>
-    <main>
-      <section>
-        <h2>Add a Note</h2>
-        <form>
-          <label for="note-title">Title:</label>
-          <input type="text" id="note-title" name="note-title">
-          <label for="note-body">Note:</label>
-          <textarea id="note-body" name="note-body"></textarea>
-          <button type="submit">Add Note</button>
-        </form>
+    <main class="container">
+      <section class="note-container">
+        <div class="note">
+          <h2 class="note-title">Great trip</h2>
+          <p class="note-text">I just had the greatest trip of my life</p>
+          <ul class="note-tags">
+            <li>Trip</li>
+            <li>Travel</li>
+            <li>Fun</li>
+          </ul>
+          <p class="note-last-updated">Last updated on March 28, 2023</p>
+        </div>
+        <div class="note">
+          <h2 class="note-title">Read a book</h2>
+          <p class="note-text">I just read Atomic Habits and it gave me a lot of insight into my life!</p>
+          <ul class="note-tags">
+            <li>Books</li>
+            <li>Habits</li>
+            <li>Education</li>
+          </ul>
+          <p class="note-last-updated">Last updated on March 28, 2023</p>
+        </div>
+        <div class="note">
+          <h2 class="note-title">Need to buy milk</h2>
+          <p class="note-text">I really need to buy milk</p>
+          <ul class="note-tags">
+            <li>Milk</li>
+          </ul>
+          <p class="note-last-updated">Last updated on March 28, 2023</p>
+        </div>      
       </section>
       <section>
-        <h2>Recent Notes</h2>
-        <ul id="note-list">
-          <li>
-            <h3>Note Title</h3>
-            <p>Note content goes here.</p>
-            <p>Shared by <em>username</em> on <time datetime="2023-03-21T14:30:00Z">March 21, 2023 at 2:30pm UTC</time></p>
-          </li>
-          <!-- Additional notes would be added here dynamically with JavaScript -->
-        </ul>
+
+        <form> 
+          <h2>Add a Note</h2>
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required>
+        
+          <label for="text">Text:</label>
+          <textarea class="textarea-addnote" id="text" name="text" required></textarea>
+        
+          <label for="tags">Tags (comma-separated):</label>
+          <input type="text" id="tags" name="tags">
+        
+          <button class="but" type="submit">Add Note</button>
+        </form>
+        
       </section>
     </main>
-    <footer>
-      <p>Created by Me, 2023</p>
-    </footer>
+    <footer class="footer">
+			<div class="footer-div">
+				<p>&copy; 2023 MindShare. All rights reserved.</p>
+				<ul class="social-media-links">
+					<li><a href="https://www.facebook.com"><i class="but">Facebook</i></a></li>
+					<li><a href="https://www.instagram.com"><i class="but">Instagram</i></a></li>
+					<li><a href="https://www.twitter.com"><i class="but">Twitter</i></a></li>
+				</ul>
+			</div>
+		</footer>
     <script src="app.js"></script>
   </body>
 </html>
