@@ -183,6 +183,7 @@ button:hover {
 }
 .note .note-text {
   font-size: 18px;
+  width: 100%;
   margin-bottom: 20px;
 }
 .note .note-tags {
